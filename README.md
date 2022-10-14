@@ -2,3 +2,4 @@
 Advent of Code solutions in various languages
 
 ### Languages:
+- Rust
