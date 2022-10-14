@@ -6,7 +6,6 @@ pub fn part_01(input: Vec<String>) -> i32 {
 
     for line in iter {
         let line_split: Vec<&str> = line.split(" ").collect();
-        println!("{}, {}", line_split[0], line_split[1]);
         match line_split[0] {
             "forward" => horizontal += line_split[1].parse::<i32>().unwrap(),
             "down" => depth += line_split[1].parse::<i32>().unwrap(),
@@ -27,7 +26,6 @@ pub fn part_02(input: Vec<String>) -> i32 {
 
     for line in iter {
         let line_split: Vec<&str> = line.split(" ").collect();
-        println!("{}, {}", line_split[0], line_split[1]);
         match line_split[0] {
             "forward" => {
                 horizontal += line_split[1].parse::<i32>().unwrap();
