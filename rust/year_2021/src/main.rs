@@ -25,13 +25,17 @@ fn main() {
 
     // Run appropriate question
     match problem_id.as_str() {
-        "1.1" => println!("{}", prettify(day_01::part_01(input).to_string())),
-        "1.2" => println!("{}", prettify(day_01::part_02(input).to_string())),
-        "2.1" => println!("{}", prettify(day_02::part_01(input).to_string())),
+        "1.1" => println!("{}", prettify(day_01::part_01(input))),
+        "1.2" => println!("{}", prettify(day_01::part_02(input))),
+        "2.1" => println!("{}", prettify(day_02::part_01(input))),
+        "2.2" => println!("{}", prettify(day_02::part_02(input))),
         _ => panic!("{}", "Not a valid problem".red().bold()),
     };
 }
 
-fn prettify(str: String) -> ColoredString {
-    format!("Answer: {}", str).bright_cyan().bold().on_black()
+fn prettify(str: i32) -> ColoredString {
+    format!("Answer: {}", str.to_string())
+        .bright_cyan()
+        .bold()
+        .on_black()
 }
